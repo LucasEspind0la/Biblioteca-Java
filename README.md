@@ -38,7 +38,6 @@ Uma **biblioteca digital minimalista** desenvolvida em Java puro, sem frameworks
 - ✨ **Orientação a Objetos** (encapsulamento, abstração)
 - 🧩 **Estruturas de dados** (arrays + contagem manual)
 - 💡 **Lógica de programação** (buscas, remoções, validações)
-- 🎨 **UX no terminal** (interfaces visuais com Unicode)
 
 > 💬 *"Programar não é sobre ferramentas — é sobre resolver problemas com elegância."*
 
