@@ -53,10 +53,5 @@ Uma **biblioteca digital minimalista** desenvolvida em Java puro, sem frameworks
 | 🔍 **Buscar por Título** | Encontra livros ignorando maiúsculas/minúsculas | ✅ Completo |
 | 🏷️ **Buscar por Categoria** | Lista **todos** os livros de uma categoria específica | ✅ Completo |
 | ➖ **Remover Livro** | Remove livros com confirmação visual e feedback claro | ✅ Completo |
-| 🎨 **Interface Visual** | Menu com bordas Unicode e ícones intuitivos | ✅ Completo |
 
----
 
-## 🖥️ Interface Interativa
-
-Ao executar o programa, você verá este menu elegante no terminal:
