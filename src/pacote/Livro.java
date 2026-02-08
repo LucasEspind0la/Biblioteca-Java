@@ -14,9 +14,23 @@ public class Livro {
 	    
 	    public Livro(String titulo, String autor, String categoria, int ano, int estoque) {
 	    	
-	    	this.titulo = titulo;
-	    	this.autor = autor;
-	    	this.categoria = categoria;
+	    	if (titulo == null || titulo.trim().isEmpty()) {
+	    		
+	    	    throw new IllegalArgumentException("Título é obrigatório! ;( ");
+	    	}
+	    	if (autor == null || autor.trim().isEmpty()) {
+	    		
+	    	    throw new IllegalArgumentException("Autor é obrigatório! ;( ");
+	    	}
+	    	if (categoria == null || categoria.trim().isEmpty()) {
+	   
+	    	    throw new IllegalArgumentException("Categoria é obrigatória!  ;( ");
+	    	}
+	    	
+	    	// dados já validados
+	    	this.titulo = titulo.trim(); // opcional: .trim() para limpar espaços
+	    	this.autor = autor.trim();
+	    	this.categoria = categoria.trim();
 	    	this.ano = ano;
 	    	this.estoque = estoque;
 	    	
@@ -58,7 +72,10 @@ public class Livro {
 			return titulo;
 		}
 		public void setTitulo(String titulo) {
-			this.titulo = titulo;
+		    if (titulo == null || titulo.trim().isEmpty()) {
+		        throw new IllegalArgumentException("Título não pode ser vazio");
+		    }
+		    this.titulo = titulo.trim();
 		}
 		
 		public void exibir() {

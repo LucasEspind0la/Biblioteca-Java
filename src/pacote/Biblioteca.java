@@ -26,7 +26,7 @@ public class Biblioteca {
 			totalDeLivros++;
 			System.out.println("Livro '" + livro.getTitulo() + "' adicionado com sucesso!");
 		}else {
-			System.out.println(" Biblioteca cheia!" + livros.length);
+			System.out.println(" Biblioteca Cheia!" + livros.length);
 		}
 	}
 	
@@ -53,7 +53,10 @@ public class Biblioteca {
                 encontrado = true;
             } 
         }
-	}
+        if (!encontrado) {
+            System.out.println("Nenhum livro encontrado na categoria: " + categoria);
+        }
+    }
 
 	public Livro buscarPorTitulo(String titulo) {
 	    for (int i = 0; i < totalDeLivros; i++) {

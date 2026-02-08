@@ -9,7 +9,7 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         boolean executando = true;      
         
-		while(executando) {                     //MENU
+		while(executando) {                     //MENU :)
 			System.out.println();
 		    System.out.println("╔════════════════════════════════════════╗");
 		    System.out.println("║          MENU DA BIBLIOTECA            ║");
@@ -27,9 +27,12 @@ public class Principal {
 		int opcao = scanner.nextInt();
         scanner.nextLine(); // Limpa o buffer do teclado
         
+        
         switch (opcao) {
-        	
+        
         	case 1:// cria/Adiciona Livros a Biblioteca
+
+        	    System.out.print("-----------------------------------------\n\n");
 
                 System.out.print("Titulo: ");
                 String titulo = scanner.nextLine();
@@ -47,10 +50,15 @@ public class Principal {
                 int estoque = scanner.nextInt();
                 scanner.nextLine(); // Limpa buffer
                 
-                // Cria um objeto
+                try {
+                    Livro livro = new Livro(titulo, autor, categoria, ano, estoque);
+                    biblioteca.adicionarLivro(livro);
+                    System.out.println(" Livro cadastrado!");
+                } catch (IllegalArgumentException e) {
+                    System.out.println("\n " + e.getMessage());
+                    System.out.println("Por favor, preencha todos os campos obrigatórios!\n");
+                }
                 
-                Livro novoLivro = new Livro(titulo, autor, categoria, ano, estoque);
-                biblioteca.adicionarLivro(novoLivro);
                 break;
                 
             case 2:// Lista Livros na B.
@@ -97,6 +105,8 @@ public class Principal {
                 
                 System.out.println("\n======= LIVROS NA CATEGORIA: " + categoriaBusca + " =======\n");
                 biblioteca.buscarPorCategoria(categoriaBusca);
+                
+                
                 break;
                 
             case 0:// saida do loop\
@@ -108,8 +118,10 @@ public class Principal {
             default: // mostra uma mensagem de erro!
             	System.out.println("Opção inválida. Tente novamente.");
         }
+        
     }
     
     scanner.close();
 }
+    
 }
