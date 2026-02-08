@@ -39,17 +39,17 @@ public class Biblioteca {
 			System.out.println("║      LISTA DE LIVROS CADASTRADOS     ║");
 			System.out.println("╚══════════════════════════════════════╝\n");
 		
-		for(int i = 0; i < totalDeLivros; i ++) {
-			livros[i].exibir();
+		for(int posicao = 0; posicao < totalDeLivros; posicao ++) {
+			livros[posicao].exibir();
 		}
 	}
 	
 	public void buscarPorCategoria(String categoria) {
 	    boolean encontrado = false;
         
-        for (int i = 0; i < totalDeLivros; i++) {
-            if (livros[i].getCategoria().equalsIgnoreCase(categoria)) {
-                livros[i].exibir();
+        for (int posicao = 0; posicao < totalDeLivros; posicao++) {
+            if (livros[posicao].getCategoria().equalsIgnoreCase(categoria)) {
+                livros[posicao].exibir();
                 encontrado = true;
             } 
         }
@@ -59,9 +59,9 @@ public class Biblioteca {
     }
 
 	public Livro buscarPorTitulo(String titulo) {
-	    for (int i = 0; i < totalDeLivros; i++) {
-	        if (livros[i].getTitulo().equalsIgnoreCase(titulo)) {
-	        	return livros[i]; // Encontrou e retorna o livro da posição i
+	    for (int posicao = 0; posicao < totalDeLivros; posicao++) {
+	        if (livros[posicao].getTitulo().equalsIgnoreCase(titulo)) {
+	        	return livros[posicao]; // Encontrou e retorna o livro da posição i
 	        }
 	    }
 	    return null; // Nao encontrou
@@ -74,13 +74,13 @@ public class Biblioteca {
 	    
 	    String tituloBusca = tituloRemover.trim();
 	    
-	    for (int i = 0; i < totalDeLivros; i++) {
-	        if (livros[i] != null && livros[i].getTitulo().equalsIgnoreCase(tituloBusca)) {
+	    for (int posicao = 0; posicao < totalDeLivros; posicao++) {
+	        if (livros[posicao] != null && livros[posicao].getTitulo().equalsIgnoreCase(tituloBusca)) {
 	        	
 	            // Desloca os livros seguintes para preencher o espaço
 	        	
-	            for (int j = i; j < totalDeLivros - 1; j++) {
-	                livros[j] = livros[j + 1];
+	            for (int proximaPosicao = posicao; proximaPosicao < totalDeLivros - 1; proximaPosicao++) {
+	                livros[proximaPosicao] = livros[proximaPosicao + 1];
 	            }
 	            livros[totalDeLivros - 1] = null; // Limpa última posição
 	            totalDeLivros--; // DECREMENTo

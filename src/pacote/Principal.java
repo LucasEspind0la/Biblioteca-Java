@@ -109,7 +109,7 @@ public class Principal {
                 
                 break;
                 
-            case 0:// saida do loop\
+            case 0:// saida do loop
             	
                 executando = false;
                 System.out.println("Saindo... Até logo!");
