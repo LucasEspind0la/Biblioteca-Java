@@ -15,9 +15,7 @@ Sistema simples e intuitivo para gerenciar uma biblioteca pessoal, desenvolvido 
 - ✅ Interface visual com menu interativo no terminal
 - ✅ Validação de entradas e feedbacks claros ao usuário
 
-## 🖥️ Menu Interativo
-
-Ao executar o programa, você verá este menu elegante no terminal:
+## 🖥️ Menu Interativo!
 
 
 
