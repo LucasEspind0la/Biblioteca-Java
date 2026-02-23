@@ -26,7 +26,7 @@ A **Biblioteca Digital** é uma aplicação Java desenvolvida para gerenciar ite
 | 📋 **Listar Acervo** | Exibição formatada de todos os itens cadastrados |
 | 🔍 **Buscar por Título** | Consulta exata de um item pelo nome |
 | 🏷️ **Buscar por Categoria** | Filtragem de itens por gênero/categoria |
-| 🎨 **Interface Colorida** | Console com cores ANSI, emojis e formatação visual |
+| 🎨 **Interface** | Console com cores ANSI, emojis e formatação visual |
 | ✅ **Validação Robusta** | Tratamento de entradas inválidas e exceções personalizadas |
 
 ---
